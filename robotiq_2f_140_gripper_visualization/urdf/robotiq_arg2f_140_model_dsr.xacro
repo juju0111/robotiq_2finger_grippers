@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <robot name="robotiq_arg2f_140_model" xmlns:xacro="http://ros.org/wiki/xacro">
-  <xacro:include filename="$(find robotiq_2f_140_gripper_visualization)/urdf/robotiq_arg2f_140_model_macro.xacro" />
+  <xacro:include filename="$(find robotiq_2f_140_gripper_visualization)/urdf/robotiq_2f_140_model_full.xacro" />
 
+  <!--xacro:include filename="$(find robotiq_2f_140_gripper_visualization)/urdf/robotiq_arg2f_140_model_macro_dsr.xacro" /-->
 
   <link name="robotiq_coupler">
     <visual>
@@ -23,15 +24,23 @@
     </inertial>
   </link>
 
-  <!--joint name="robotiq_coupler_joint" type="fixed">
+  <joint name="robotiq_coupler_joint" type="fixed">
     <origin xyz="0 0 0.004" rpy="0 0 ${-pi/2.0}" />
-    <parent link="world"/>
+    <parent link="link6"/>
     <child link="robotiq_coupler"/>
-  </joint-->
+  </joint>
+
+  <gazebo reference="robotiq_coupler">
+    <mu1>0.9</mu1>o:
+    <mu2>0.9</mu2>
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  
 
 
-  <xacro:robotiq_arg2f_140 prefix="" parent="robotiq_coupler" >
+  <xacro:robotiq_140_gripper prefix="" parent="robotiq_coupler" >
+    <!--origin xyz="0 0 0.004" rpy="0 0 0"/-->
     <origin xyz="0 0 0.004" rpy="0 ${-pi/2} ${pi}"/>
-  </xacro:robotiq_arg2f_140>
+  </xacro:robotiq_140_gripper> 
 
 </robot>

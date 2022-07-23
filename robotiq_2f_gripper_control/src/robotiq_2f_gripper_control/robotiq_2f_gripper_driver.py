@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 """--------------------------------------------------------------------
 COPYRIGHT 2015 Stanley Innovation Inc.
 
@@ -43,12 +43,15 @@ allow for the control and operation (also simulation of operation) of the 2 fing
 The end user should not need to use this class direcly since an instance of it is created with every action server
 controlling a given gripper, and commanded by the user commands puubished by an action client instance.  
 """
+import sys,os
+print()
+sys.path.append("/home/juju/catkin_ws/src/robotiq_2finger_grippers/robotiq_2f_gripper_control/src/robotiq_2f_gripper_control")
 
+import rospy
 from robotiq_2f_gripper import Robotiq2FingerGripper
 from robotiq_2f_gripper_msgs.msg import RobotiqGripperCommand, RobotiqGripperStatus, CommandRobotiqGripperGoal
 from sensor_msgs.msg import JointState
 import numpy as np
-import rospy
 from enum import Enum
 
 WATCHDOG_TIME = 1.0   # Max Time without communication with gripper allowed
