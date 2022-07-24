@@ -29,9 +29,9 @@
     </link>
   </xacro:macro>
 
-  <xacro:macro name="finger_joints" params="prefix fingerprefix reflect">
+  <xacro:macro name="finger_joints" params="prefix fingerprefix reflect d">
     <xacro:outer_finger_joint prefix="${prefix}" fingerprefix="${fingerprefix}"/>
-    <xacro:inner_knuckle_joint prefix="${prefix}" fingerprefix="${fingerprefix}" reflect="${reflect}"/>
+    <xacro:inner_knuckle_joint prefix="${prefix}" fingerprefix="${fingerprefix}" reflect="${reflect}" d="${d}"/>
     <xacro:inner_finger_joint prefix="${prefix}" fingerprefix="${fingerprefix}"/>
     <xacro:inner_finger_pad_joint prefix="${prefix}" fingerprefix="${fingerprefix}"/>
   </xacro:macro>
