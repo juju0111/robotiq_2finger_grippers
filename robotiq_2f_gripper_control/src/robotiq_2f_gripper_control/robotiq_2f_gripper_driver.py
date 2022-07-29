@@ -84,6 +84,8 @@ class Robotiq2FingerGripperDriver:
         
 
         # Instanciate and open communication with gripper.
+        
+        ## 여기 수정 !!!!
         self._gripper = Robotiq2FingerGripper(device_id=0, stroke=stroke, comport=self._comport, baud=self._baud)
         
         self._max_joint_limit = 0.8
