@@ -212,7 +212,7 @@ if __name__ == "__main__":
     rospy.init_node('robotiq_2f_action_server')
 
     # Get Node parameters
-    comport = rospy.get_param('~comport','/dev/ttyUSB0')
+    comport = rospy.get_param('~comport','/ttyUSB0')
     baud = rospy.get_param('~baud','115200')
     stroke = rospy.get_param('~stroke', 0.085)                # Default stroke is 85mm (Small C / 2 finger adaptive gripper model)
     joint_name = rospy.get_param('~joint_name', 'finger_joint')    

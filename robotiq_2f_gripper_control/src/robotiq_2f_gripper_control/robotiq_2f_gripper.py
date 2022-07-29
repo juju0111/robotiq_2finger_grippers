@@ -17,15 +17,15 @@ SPEED_INDEX    = 11
 FORCE_INDEX    = 12
 
 class Robotiq2FingerGripper:
-    def __init__(self, device_id=0, stroke=0.085, comport='/dev/ttyUSB0',baud=115200):
+    def __init__(self, device_id=0, stroke=0.085, comport='/ttyUSB0',baud=115200):
 
 
         self.client = robotiq_modbus_rtu.comModbusRtu.communication()
         
         
         ## 여기 바꿔 !!!
-        #connected = self.client.connectToDevice(device = comport, type ='rtu')
-        connected = self.client.connectToDevice(device = comport, type ='tcp')
+        connected = self.client.connectToDevice(device = comport, type ='rtu')
+        #connected = self.client.connectToDevice(device = comport, type ='tcp')
         
         
         if not connected:
