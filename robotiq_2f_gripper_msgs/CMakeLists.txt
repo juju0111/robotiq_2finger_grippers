@@ -15,6 +15,13 @@ add_message_files(
         RobotiqGripperStatus.msg
 )
 
+add_service_files(
+    DIRECTORY 
+        srv 
+    FILES
+        Robotiq2FMove.srv
+)    
+
 add_action_files(
   DIRECTORY 
     action

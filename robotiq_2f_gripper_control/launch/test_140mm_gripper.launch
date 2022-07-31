@@ -15,7 +15,7 @@
     </include>
 
     <!-- Launch action client example  -->
-    <node pkg="robotiq_2f_gripper_control" type="robotiq_2f_action_client_example.py" 
+    <node pkg="robotiq_2f_gripper_control" type="robotiq_2f_action_client_example_class.py" 
         name="robotiq_140_client" output="screen">
         <param name="action_name" value="command_robotiq_action" />
     </node>

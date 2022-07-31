@@ -40,6 +40,11 @@ class CommandGripperActionServer(object):
                                                             FollowJointTrajectoryAction, 
                                                             execute_cb=self.execute_joint_trajectory_cb,
                                                             auto_start = False)
+        #self._joint_trajectory_action_server = actionlib.SimpleActionServer(namespace + "dsr_joint_trajectory_controller/follow_joint_trajectory", 
+        #                                                    FollowJointTrajectoryAction, 
+        #                                                    execute_cb=self.execute_joint_trajectory_cb,
+        #                                                    auto_start = False)                                                    
+        
         self._driver = driver       # Get handle to the Gripper Control Server
         
         # Wait until gripper driver is ready to take commands.
