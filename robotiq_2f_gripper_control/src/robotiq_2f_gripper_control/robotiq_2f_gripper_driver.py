@@ -45,6 +45,7 @@ controlling a given gripper, and commanded by the user commands puubished by an 
 """
 import sys,os
 print()
+## 여기 수정 !! 자기 노트북의 폴더 주소로 바꾸시오.
 sys.path.append("/home/juju/catkin_ws/src/robotiq_2finger_grippers/robotiq_2f_gripper_control/src/robotiq_2f_gripper_control")
 
 import rospy
