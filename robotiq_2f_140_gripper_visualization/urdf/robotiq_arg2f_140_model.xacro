@@ -8,7 +8,7 @@
       <geometry>
         <mesh filename="package://dsr_description/meshes/gripper/robotiq/85_2f/robotiq_85_coupler.stl" />
       </geometry>
-      <material name="dr_white"/>
+      <!-- <material name="dr_white"/> -->
     </visual>
     <collision>
       <geometry>
