@@ -12,7 +12,7 @@ Note: This package is based on [waypointrobotics/robotiq_85_gripper](https://git
 
 *A pull request to this packages requires further analysis since I performed many structural changes, which will create conflict for previous users.*
 ### Ros Distro
-This package has been tested on `Kinetic` and `Melodic`.
+This package has been tested on `Kinetic`, `Melodic`, `Noetic`.
 # Contents
 - [Contents](#contents)
 - [Operation Instructions](#operation-instructions)
