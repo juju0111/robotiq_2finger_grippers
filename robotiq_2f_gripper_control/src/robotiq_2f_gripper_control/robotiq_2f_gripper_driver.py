@@ -45,8 +45,16 @@ controlling a given gripper, and commanded by the user commands puubished by an 
 """
 import sys,os
 print()
+
 ## 여기 수정 !! 자기 노트북의 폴더 주소로 바꾸시오.
-sys.path.append("/home/juju/catkin_ws/src/robotiq_2finger_grippers/robotiq_2f_gripper_control/src/robotiq_2f_gripper_control")
+gripper_pkg_path = "/home/juju/catkin_ws/src/robotiq_2finger_grippers/robotiq_2f_gripper_control/src/robotiq_2f_gripper_control"
+
+if os.path.isdir(gripper_pkg_path):
+    sys.path.append(gripper_pkg_path)
+else:
+    Error_color = '\033[91m'
+    End_color = '\033[0m'
+    raise NotADirectoryError(f"{Error_color}Please check robotiq_2finger_grippers dir path!!{End_color}")
 
 import rospy
 from robotiq_2f_gripper import Robotiq2FingerGripper
